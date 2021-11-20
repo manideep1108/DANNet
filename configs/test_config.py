@@ -1,7 +1,7 @@
 import argparse
 
 # validation set path
-DATA_DIRECTORY = '/path/to/Dark_Zurich_val_anon/rgb_anon/val'
+DATA_DIRECTORY = '/kaggle/input/dark-zurich/Dark_Zurich_val_anon/rgb_anon/val'
 DATA_LIST_PATH = './dataset/lists/zurich_val.txt'
 
 # test set path
