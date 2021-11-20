@@ -1,7 +1,7 @@
 import argparse
 
-MODEL = 'RefineNet'  # PSPNet, DeepLab, RefineNet
-RESTORE_FROM = './pretrained_models/pretrain_refinenet_150000.pth'
+MODEL = 'DeepLab'  # PSPNet, DeepLab, RefineNet
+RESTORE_FROM = './pretrained_models/pretrain_deeplab_150000.pth'
 
 BATCH_SIZE = 2
 ITER_SIZE = 1
