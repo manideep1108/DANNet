@@ -23,6 +23,8 @@ class cityscapesDataSet(data.Dataset):
 
         self.target_transform = extended_transforms.MaskToTensor()
         self.transform = standard_transforms.Compose(train_input_transform)
+        
+
 
         self.img_ids = [i_id.strip() for i_id in open(list_path)]
         if not max_iters == None:
@@ -31,7 +33,7 @@ class cityscapesDataSet(data.Dataset):
         self.set = set
         for name in self.img_ids:
             img_file = osp.join(self.root, "leftImg8bit/%s/%s" % (self.set, name))
-            label_file = osp.join(self.root, "gtFine/%s/%s" % (self.set, name)).replace("leftImg8bit", "gtFine_labelIds")
+            label_file = osp.join(self.root, "gtFine_trainvaltest/gtFine/%s/%s" % (self.set, name)).replace("leftImg8bit", "gtFine_labelIds")
             self.files.append({
                 "img": img_file,
                 "label": label_file,
